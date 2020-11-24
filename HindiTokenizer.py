@@ -5,7 +5,7 @@ class Tokenizer():
     def __init__(self,text):
         if text is  not None:
             # self.text=text.decode('utf-8')
-            self.clean_text()
+#             self.clean_text()
         else:
             self.text=None
             self.sentences=[]
@@ -32,23 +32,23 @@ class Tokenizer():
             for i in self.sentences:
                 print(i.encode('utf-8'))
 
-    def clean_text(self):
-        '''not working'''
-        text=self.text
-        text = self.sentence
-        text=re.sub(r'(\d+)',r'',text)
-        text=text.replace(u',','')
-        text=text.replace(u'"','')
-        text=text.replace(u'(','')
-        text=text.replace(u')','')
-        text=text.replace(u'"','')
-        text=text.replace(u':','')
-        text=text.replace(u"'",'')
-        text=text.replace(u"‘‘",'')
-        text=text.replace(u"’’",'')
-        text=text.replace(u"''",'')
-        text=text.replace(u".",'')
-        self.text=text
+#     def clean_text(self):
+#         '''not working'''
+#         text=self.text
+#         text = self.sentence
+#         text=re.sub(r'(\d+)',r'',text)
+#         text=text.replace(u',','')
+#         text=text.replace(u'"','')
+#         text=text.replace(u'(','')
+#         text=text.replace(u')','')
+#         text=text.replace(u'"','')
+#         text=text.replace(u':','')
+#         text=text.replace(u"'",'')
+#         text=text.replace(u"‘‘",'')
+#         text=text.replace(u"’’",'')
+#         text=text.replace(u"''",'')
+#         text=text.replace(u".",'')
+#         self.text=text
 
     def remove_only_space_words(self):
         tokens=filter(lambda tok: tok.strip(),self.tokens)
