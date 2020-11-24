@@ -5,7 +5,7 @@ class Tokenizer():
     def __init__(self,text=None):
         if text is  not None:
             print("Not_none")
-#             # self.text=text.decode('utf-8')
+            self.text=text
 # #             self.clean_text()
         else:
             self.text=None
