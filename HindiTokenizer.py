@@ -149,25 +149,24 @@ class Tokenizer():
 
     def generate_stem_dict(self):
         '''returns a dictionary of stem words for each token'''
-  # suffixes = {
-#   				1: ["ो", "े", "ू", "ु", "ी", "ि", "ा"],
-#   				2: ["कर", "ाओ", "िए", "ाई", "ाए", "ने", "नी", "ना", "ते", "ीं", "ती", "ता", "ाँ", "ां", "ों", "ें"],
-#   				3: ["ाकर", "ाइए", "ाईं", "ाया", "ेगी", "ेगा", "ोगी", "ोगे", "ाने", "ाना", "ाते", "ाती", "ाता", "तीं", "ाओं", "ाएं", "ुओं", "ुएं", "ुआं"],
-#   				4: ["ाएगी", "ाएगा", "ाओगी", "ाओगे", "एंगी", "ेंगी", "एंगे", "ेंगे", "ूंगी", "ूंगा", "ातीं", "नाओं", "नाएं", "ताओं", "ताएं", "ियाँ", "ियों", "ियां"],
-#   				5: ["ाएंगी", "ाएंगे", "ाऊंगी", "ाऊंगा", "ाइयाँ", "ाइयों", "ाइयां"],
-  # 			}
-
-        stem_word={}
-        if not self.tokens:
-            self.tokenize()
-        for each_token in self.tokens:
-            #print type(each_token)
-            temp=self.generate_stem_words(each_token)
-            #print temp
-            stem_word[each_token]=temp
-            self.stemmed_word.append(temp)
-    
-        return stem_word
+	suffixes = {
+		1: ["ो", "े", "ू", "ु", "ी", "ि", "ा"],
+		2: ["कर", "ाओ", "िए", "ाई", "ाए", "ने", "नी", "ना", "ते", "ीं", "ती", "ता", "ाँ", "ां", "ों", "ें"],
+		3: ["ाकर", "ाइए", "ाईं", "ाया", "ेगी", "ेगा", "ोगी", "ोगे", "ाने", "ाना", "ाते", "ाती", "ाता", "तीं", "ाओं", "ाएं", "ुओं", "ुएं", "ुआं"],
+		4: ["ाएगी", "ाएगा", "ाओगी", "ाओगे", "एंगी", "ेंगी", "एंगे", "ेंगे", "ूंगी", "ूंगा", "ातीं", "नाओं", "नाएं", "ताओं", "ताएं", "ियाँ", "ियों", "ियां"],
+		5: ["ाएंगी", "ाएंगे", "ाऊंगी", "ाऊंगा", "ाइयाँ", "ाइयों", "ाइयां"],
+	}
+	
+	stem_word={}
+	if not self.tokens:
+		self.tokenize()
+	for each_token in self.tokens:
+		#print type(each_token)
+		temp=self.generate_stem_words(each_token)
+		#print temp
+		stem_word[each_token]=temp
+		self.stemmed_word.append(temp)
+	return stem_word
 
     def remove_stop_words(self):
         f=codecs.open("/content/Hindi-Tokenizer/stopwords.txt",encoding='utf-8')
