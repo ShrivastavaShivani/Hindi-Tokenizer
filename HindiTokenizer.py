@@ -3,16 +3,18 @@ import re
 class Tokenizer():
 	# '''class for tokenizer'''
     def __init__(self,text=None):
-	#         if text is  not None:
+        if text is  not None:
+            print("Not_none")
 #             # self.text=text.decode('utf-8')
 # #             self.clean_text()
-        if text is None:
-		self.text=None
-	self.sentences=[]
-	self.tokens=[]
-	self.stemmed_word=[]
-	self.final_list=[]
-	#self.final_tokens=[]
+        else:
+            self.text=None
+            
+        self.sentences=[]
+        self.tokens=[]
+        self.stemmed_word=[]
+        self.final_list=[]
+    	#self.final_tokens=[]
 	
     def read_from_file(self,filename):
         f=codecs.open(filename,encoding='utf-8')
