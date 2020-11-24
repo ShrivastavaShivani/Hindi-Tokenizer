@@ -6,7 +6,7 @@ class Tokenizer():
         if text is  not None:
             print("Not_none")
             self.text=text
-# #             self.clean_text()
+            self.clean_text()
         else:
             self.text=None
             
