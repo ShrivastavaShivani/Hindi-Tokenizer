@@ -3,10 +3,10 @@ import re
 class Tokenizer():
 	# '''class for tokenizer'''
     def __init__(self,text):
-        if text is  not None:
-            # self.text=text.decode('utf-8')
-#             self.clean_text()
-        else:
+#         if text is  not None:
+#             # self.text=text.decode('utf-8')
+# #             self.clean_text()
+        if text is None:
             self.text=None
             self.sentences=[]
             self.tokens=[]
