@@ -37,7 +37,6 @@ class Tokenizer():
     def clean_text(self):
         '''not working'''
         text=self.text
-        text = self.sentence
         text=re.sub(r'(\d+)',r'',text)
         text=text.replace(u',','')
         text=text.replace(u'"','')
