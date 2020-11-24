@@ -3,7 +3,7 @@ import re
 class Tokenizer():
 	# '''class for tokenizer'''
     def __init__(self,text=None):
-#         if text is  not None:
+	#         if text is  not None:
 #             # self.text=text.decode('utf-8')
 # #             self.clean_text()
         if text is None:
