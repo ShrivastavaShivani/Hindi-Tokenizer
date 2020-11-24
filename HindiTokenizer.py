@@ -7,7 +7,7 @@ class Tokenizer():
 #             # self.text=text.decode('utf-8')
 # #             self.clean_text()
         if text is None:
-            self.text=None
+		self.text=None
 	self.sentences=[]
 	self.tokens=[]
 	self.stemmed_word=[]
