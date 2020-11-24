@@ -34,23 +34,23 @@ class Tokenizer():
             for i in self.sentences:
                 print(i.encode('utf-8'))
 
-#     def clean_text(self):
-#         '''not working'''
-#         text=self.text
-#         text = self.sentence
-#         text=re.sub(r'(\d+)',r'',text)
-#         text=text.replace(u',','')
-#         text=text.replace(u'"','')
-#         text=text.replace(u'(','')
-#         text=text.replace(u')','')
-#         text=text.replace(u'"','')
-#         text=text.replace(u':','')
-#         text=text.replace(u"'",'')
-#         text=text.replace(u"‘‘",'')
-#         text=text.replace(u"’’",'')
-#         text=text.replace(u"''",'')
-#         text=text.replace(u".",'')
-#         self.text=text
+    def clean_text(self):
+        '''not working'''
+        text=self.text
+        text = self.sentence
+        text=re.sub(r'(\d+)',r'',text)
+        text=text.replace(u',','')
+        text=text.replace(u'"','')
+        text=text.replace(u'(','')
+        text=text.replace(u')','')
+        text=text.replace(u'"','')
+        text=text.replace(u':','')
+        text=text.replace(u"'",'')
+        text=text.replace(u"‘‘",'')
+        text=text.replace(u"’’",'')
+        text=text.replace(u"''",'')
+        text=text.replace(u".",'')
+        self.text=text
 
     def remove_only_space_words(self):
         tokens=filter(lambda tok: tok.strip(),self.tokens)
